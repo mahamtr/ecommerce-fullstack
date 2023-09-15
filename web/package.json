@@ -1,4 +1,5 @@
 {
+  "proxy":"http://localhost:4000",
   "dependencies": {
     "@auth0/auth0-react": "^2.2.1",
     "@emotion/react": "^11.11.1",

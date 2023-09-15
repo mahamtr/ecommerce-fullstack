@@ -4,6 +4,7 @@ import { PageLoader } from "./components/page-loader";
 import { AuthenticationGuard } from "./components/authentication-guard";
 import { Route, Routes } from "react-router-dom";
 import HomePage from "./components/HomePage";
+import Checkout from "./components/Checkout";
 
 export function App() {
   const { isLoading } = useAuth0();
@@ -18,6 +19,7 @@ export function App() {
   return (
     <Routes>
       <Route path="/" element={<HomePage />} />
+      <Route path="/checkout" element={<Checkout />} />
       <Route path="*" element={<div>not found</div>} />
     </Routes>
   );
