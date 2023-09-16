@@ -1,14 +1,21 @@
 import { Auth0Provider, AppState } from "@auth0/auth0-react";
-import React, { PropsWithChildren } from "react";
+import React, { PropsWithChildren, createContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 interface Auth0ProviderWithNavigateProps {
   children: React.ReactNode;
 }
 
-export const Auth0ProviderWithNavigate = ({
+export const Auth0AppContext = createContext({
+  userData: {},
+  setUserData: (state: any) => {},
+});
+
+export function Auth0ProviderWithNavigate({
   children,
-}: PropsWithChildren<Auth0ProviderWithNavigateProps>): JSX.Element | null => {
+}: PropsWithChildren<Auth0ProviderWithNavigateProps>): JSX.Element | null {
+  const [userData, setUserData] = useState();
+  const value = { userData, setUserData };
   const navigate = useNavigate();
 
   const domain = process.env.REACT_APP_AUTH0_DOMAIN;
@@ -34,7 +41,9 @@ export const Auth0ProviderWithNavigate = ({
       }}
       onRedirectCallback={onRedirectCallback}
     >
-      {children}
+      <Auth0AppContext.Provider value={value as any}>
+        {children}
+      </Auth0AppContext.Provider>
     </Auth0Provider>
   );
-};
+}

@@ -2,7 +2,7 @@ import { Controller, Post, Redirect, Res } from '@nestjs/common';
 import { StripeService } from './stripe.service';
 import { Response } from 'express';
 
-const stripe = require('stripe')(process.env.STRIPE_KEY);
+const stripe = require('stripe')('sk_test_51NpcXTDS172oNV0bZAXHlsY1zkoV5YPjE83M0e0weNp8zcct2DN3ejaIGni2NGxTVx2vKfamdwUq8fCZqg5dfV1500nbGnpYpS');
 
 @Controller('Stripe')
 export class StripeController {
@@ -21,8 +21,8 @@ export class StripeController {
           },
         ],
         mode: 'payment',
-        success_url: `${'http://localhost:4000/'}?success=true`,
-        cancel_url: `${'http://localhost:4000/'}?canceled=true`,
+        success_url: `${'http://localhost:4000/'}/payment/?success=true`,
+        cancel_url: `${'http://localhost:4000/'}/payment/?canceled=true`,
       });
 
       return {url: session.url};

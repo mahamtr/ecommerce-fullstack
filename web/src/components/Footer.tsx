@@ -1,4 +1,5 @@
 import { Box, Grid, Link, Typography } from "@mui/material";
+import CopyRight from "./CopyRight/CopyRight";
 
 const footers = [
   {
@@ -60,14 +61,7 @@ const Footer = () => {
       >
         Something here to give the footer a purpose!
       </Typography>
-      <Typography variant="body2" color="text.secondary" align="center">
-        {"Copyright © "}
-        <Link color="inherit" href="https://mui.com/">
-          ShoesX
-        </Link>{" "}
-        {new Date().getFullYear()}
-        {"."}
-      </Typography>
+      <CopyRight />
     </Box>
   );
 };
