@@ -27,153 +27,138 @@ const defaultTheme = createTheme();
 
 export default function HomePage() {
   return (
-    <ThemeProvider theme={defaultTheme}>
-      <CssBaseline />
-      <NavBar />
-      <main>
-        {/* Hero unit */}
-        <Box
-          sx={{
-            bgcolor: "background.paper",
-            pt: 0,
-            pb: 6,
-          }}
+    <div>
+      <Slider />
+
+      <Container>
+        <Typography
+          component="h1"
+          variant="h2"
+          align="center"
+          color="text.primary"
+          gutterBottom
         >
-          <Container maxWidth="sm"></Container>
-        </Box>
-        <Slider />
+          Fashion
+        </Typography>
+        <Typography
+          variant="h5"
+          align="center"
+          color="text.secondary"
+          paragraph
+        >
+          Your favourites designer wear at an affordable price.
+        </Typography>
+        <Stack
+          sx={{ pt: 4 }}
+          direction="row"
+          spacing={2}
+          justifyContent="center"
+        >
+          <Button variant="contained">Main call to action</Button>
+          <Button variant="outlined">Secondary action</Button>
+        </Stack>
+      </Container>
 
-        <Container>
-          <Typography
-            component="h1"
-            variant="h2"
-            align="center"
-            color="text.primary"
-            gutterBottom
-          >
-            Fashion
-          </Typography>
-          <Typography
-            variant="h5"
-            align="center"
-            color="text.secondary"
-            paragraph
-          >
-            Your favourites designer wear at an affordable price.
-          </Typography>
-          <Stack
-            sx={{ pt: 4 }}
-            direction="row"
-            spacing={2}
-            justifyContent="center"
-          >
-            <Button variant="contained">Main call to action</Button>
-            <Button variant="outlined">Secondary action</Button>
-          </Stack>
-        </Container>
-
-        <Box p={5}>
-          <Grid container spacing={5} justifyContent="center">
-            <Grid item xs={12} md={4} sm={6}>
-              <Card
-                sx={{ minWidth: 200 }}
-                style={{ position: "relative", width: "100%" }}
+      <Box p={5}>
+        <Grid container spacing={5} justifyContent="center">
+          <Grid item xs={12} md={4} sm={6}>
+            <Card
+              sx={{ minWidth: 200 }}
+              style={{ position: "relative", width: "100%" }}
+            >
+              <CardMedia
+                style={{
+                  marginLeft: "auto",
+                  marginRight: "auto",
+                  width: "100%",
+                  height: "auto",
+                  zIndex: "1",
+                }}
+                component="img"
+                height="200"
+                image="https://st.depositphotos.com/1001894/3115/i/600/depositphotos_31157709-stock-photo-hassan-ii-mosque-in-casablanca.jpg"
+                alt="work portfolio"
+              />
+              <Button
+                style={{
+                  position: "absolute",
+                  top: "80%",
+                  left: "50%",
+                  transform: "translate(-50%, -50%)",
+                }}
+                variant="contained"
               >
-                <CardMedia
-                  style={{
-                    marginLeft: "auto",
-                    marginRight: "auto",
-                    width: "100%",
-                    height: "auto",
-                    zIndex: "1",
-                  }}
-                  component="img"
-                  height="200"
-                  image="https://st.depositphotos.com/1001894/3115/i/600/depositphotos_31157709-stock-photo-hassan-ii-mosque-in-casablanca.jpg"
-                  alt="work portfolio"
-                />
-                <Button
-                  style={{
-                    position: "absolute",
-                    top: "80%",
-                    left: "50%",
-                    transform: "translate(-50%, -50%)",
-                  }}
-                  variant="contained"
-                >
-                  Get a Free Quote
-                </Button>
-              </Card>
-            </Grid>
-            <Grid item xs={12} md={4} sm={6}>
-              <Card
-                sx={{ minWidth: 200 }}
-                style={{ position: "relative", width: "100%" }}
-              >
-                <CardMedia
-                  style={{
-                    marginLeft: "auto",
-                    marginRight: "auto",
-                    width: "100%",
-                    height: "auto",
-                    zIndex: "1",
-                  }}
-                  component="img"
-                  height="200"
-                  image="https://st.depositphotos.com/1001894/3115/i/600/depositphotos_31157709-stock-photo-hassan-ii-mosque-in-casablanca.jpg"
-                  alt="work portfolio"
-                />
-                <Button
-                  style={{
-                    position: "absolute",
-                    top: "80%",
-                    left: "50%",
-                    transform: "translate(-50%, -50%)",
-                  }}
-                  variant="contained"
-                >
-                  Get a Free Quote
-                </Button>
-              </Card>
-            </Grid>
-            <Grid item xs={12} md={4} sm={6}>
-              <Card
-                sx={{ minWidth: 200 }}
-                style={{ position: "relative", width: "100%" }}
-              >
-                <CardMedia
-                  style={{
-                    marginLeft: "auto",
-                    marginRight: "auto",
-                    width: "100%",
-                    height: "auto",
-                    zIndex: "1",
-                  }}
-                  component="img"
-                  height="200"
-                  image="https://st.depositphotos.com/1001894/3115/i/600/depositphotos_31157709-stock-photo-hassan-ii-mosque-in-casablanca.jpg"
-                  alt="work portfolio"
-                />
-                <Button
-                  style={{
-                    position: "absolute",
-                    top: "80%",
-                    left: "50%",
-                    transform: "translate(-50%, -50%)",
-                  }}
-                  variant="contained"
-                >
-                  Get a Free Quote
-                </Button>
-              </Card>
-            </Grid>
+                Get a Free Quote
+              </Button>
+            </Card>
           </Grid>
-        </Box>
+          <Grid item xs={12} md={4} sm={6}>
+            <Card
+              sx={{ minWidth: 200 }}
+              style={{ position: "relative", width: "100%" }}
+            >
+              <CardMedia
+                style={{
+                  marginLeft: "auto",
+                  marginRight: "auto",
+                  width: "100%",
+                  height: "auto",
+                  zIndex: "1",
+                }}
+                component="img"
+                height="200"
+                image="https://st.depositphotos.com/1001894/3115/i/600/depositphotos_31157709-stock-photo-hassan-ii-mosque-in-casablanca.jpg"
+                alt="work portfolio"
+              />
+              <Button
+                style={{
+                  position: "absolute",
+                  top: "80%",
+                  left: "50%",
+                  transform: "translate(-50%, -50%)",
+                }}
+                variant="contained"
+              >
+                Get a Free Quote
+              </Button>
+            </Card>
+          </Grid>
+          <Grid item xs={12} md={4} sm={6}>
+            <Card
+              sx={{ minWidth: 200 }}
+              style={{ position: "relative", width: "100%" }}
+            >
+              <CardMedia
+                style={{
+                  marginLeft: "auto",
+                  marginRight: "auto",
+                  width: "100%",
+                  height: "auto",
+                  zIndex: "1",
+                }}
+                component="img"
+                height="200"
+                image="https://st.depositphotos.com/1001894/3115/i/600/depositphotos_31157709-stock-photo-hassan-ii-mosque-in-casablanca.jpg"
+                alt="work portfolio"
+              />
+              <Button
+                style={{
+                  position: "absolute",
+                  top: "80%",
+                  left: "50%",
+                  transform: "translate(-50%, -50%)",
+                }}
+                variant="contained"
+              >
+                Get a Free Quote
+              </Button>
+            </Card>
+          </Grid>
+        </Grid>
+      </Box>
 
-        <ItemsSlider Title={"Recommended Items"} />
-        <ItemsSlider Title={"Newly Arrived Items"} />
-      </main>
-      <Footer />
-    </ThemeProvider>
+      <ItemsSlider Title={"Recommended Items"} />
+      <ItemsSlider Title={"Newly Arrived Items"} />
+    </div>
   );
 }
