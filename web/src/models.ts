@@ -1,14 +1,17 @@
-interface Cart{
-    userEmail:string,
-    details: ProductSelection[]
+
+interface User {
+    email:string;
+    usernemail_verifiedame:boolean;
+    name:string;
+    phoneNumber: string;
+    email_verified:boolean;
+    picture:string;
+    user_id:string;
+    username:string;
+    cartDetail: CartDetail[]
 }
 
-interface ProductSelection {
-    productId:number,
-    quantity:number,
-}
-
-interface Product {
+interface Item {
     id:number,
     name:string,
     price:number,
@@ -16,23 +19,34 @@ interface Product {
     discountPercent:number,
     blobUrls:string[],
     stockQty:number,
+    category: number[]
 }
+
+
+
+
+interface CartDetail {
+    itemId:string,
+    quantity: number
+}
+
+
 
 interface Category {
     id:number,
     name:string,
-    description: string,
-    blobUrl:string,
-    products: Product[],
 }
 
 interface Order { 
-    Id:number,
-    userEmail: string,
-    details: ProductSelection[]
+    id:number,
+    userId: string,
+    cardDetail: CartDetail[]
     paymentAmount:number,
     Address:string,
-    PostCode:number,
+    postCode:number,
+}
+
+interface Transctions{
     
 }
 
